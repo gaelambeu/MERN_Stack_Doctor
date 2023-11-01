@@ -86,8 +86,8 @@ const Footer = () => {
               Copyright © {year} developed by AMBEU Gael all right reserved.
             </p>
 
-            <div>
-              {socialLinks.map((link, index))}
+            <div className="flex items-center gap-3 mt-4">
+              {socialLinks.map((link, index) => <Link to={link.path}></Link> )}
             </div>
           </div>
         </div>
