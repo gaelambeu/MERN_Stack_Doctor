@@ -87,7 +87,11 @@ const Footer = () => {
             </p>
 
             <div className="flex items-center gap-3 mt-4">
-              {socialLinks.map((link, index) => <Link to={link.path}></Link> )}
+              {socialLinks.map((link, index) => (
+                <Link to={link.path} key={index}>
+                  {link.icon}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
