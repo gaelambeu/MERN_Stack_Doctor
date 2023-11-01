@@ -19,8 +19,18 @@ const FaqItem = ({item}) => {
             <div className={`${
                 isOpen && "bg-primaryColor text-white border-none"
             } w-7 h-7 lg:w-8 lg:h-8 border border-solid border-[#141F21] rounded flex 
-            items-center justify-center`}>{isOpen ? <AiOutlineMinus /> : <AiOutlinePlus />}</div>
+            items-center justify-center`}>
+                {isOpen ? <AiOutlineMinus /> : <AiOutlinePlus />}
+            </div>
         </div>
+
+        {isOpen && (
+            <div className="mt-4">
+                <p className="text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-[400] text-textColor">
+                    {item.content}
+                </p>
+            </div>
+        )}
     </div>
   )
 }
