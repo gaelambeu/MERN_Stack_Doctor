@@ -61,9 +61,38 @@ const quickLinks02 = [
   },
 ]
 
+const quickLinks03 = [
+{
+    path: "/",
+    display: "Donate",
+  },
+  {
+    path: "/contact",
+    display: "Contact Us",
+  },
+]
+
 const Footer = () => {
+
+  const year = new Date().getFullYear()
+
   return (
-    <div>Footer</div>
+    <footer className="pb-16 pt-10">
+      <div className="container">
+        <div className="flex justify-between flex-col md:flex-row flex-wrap gap-[30px]">
+          <div>
+            <img src={logo} alt="" />
+            <p className="text-[16px] leading-7 font-[400] text-textColor mt-4">
+              Copyright © {year} developed by AMBEU Gael all right reserved.
+            </p>
+
+            <div>
+              {socialLinks.map((link, index))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   )
 }
 
