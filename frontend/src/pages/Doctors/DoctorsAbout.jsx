@@ -60,7 +60,11 @@ const DoctorsAbout = () => {
           Experience
         </h3>
 
-        <ul className="grid"></ul>
+        <ul className="grid sm:grid-cols-2 gap-[30px] pt-4 md:p-5">
+          <li className="p-4 rounded bg-[#fff9ea]">
+            <span className="text-yellowColor text-[15px] leading-6"></span>
+          </li>
+        </ul>
       </div>
     </div>
   )
