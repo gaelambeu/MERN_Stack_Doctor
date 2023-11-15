@@ -24,7 +24,11 @@ const DoctorsAbout = () => {
         </h3>
 
         <ul className="pt-4 md:p-5">
-
+          <li className="flex flex-col sm:flex-row sm:justify-between sm:items-end md:gap-5 mb-[30px]">
+            <div>
+              <span className="text-blue-400 text-[15px] leading-6 font-semibold">23 June, 2008</span>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
