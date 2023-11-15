@@ -65,7 +65,7 @@ const DoctorsDetails = () => {
                 tab==='about' && <DoctorsAbout />
               }
               {
-                tab==='about' && <Feedback />
+                tab==='feedback' && <Feedback />
               }
             </div>
 
