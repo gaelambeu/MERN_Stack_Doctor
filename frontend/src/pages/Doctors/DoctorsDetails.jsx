@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import doctorImg from '../../assets/images/doctor-img02.png'
 import starIcon from '../../assets/images/Star.png'
+import DoctorsAbout from './DoctorsAbout'
+import Feedback from './Feedback'
 
 const DoctorsDetails = () => {
 
@@ -59,7 +61,12 @@ const DoctorsDetails = () => {
             </div>
 
             <div className="mt-[50px]">
-              
+              {
+                tab==='about' && <DoctorsAbout />
+              }
+              {
+                tab==='about' && <Feedback />
+              }
             </div>
 
           </div>
