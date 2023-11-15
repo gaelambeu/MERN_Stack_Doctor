@@ -29,7 +29,13 @@ const DoctorsAbout = () => {
               <span className="text-blue-400 text-[15px] leading-6 font-semibold">
                 23 June, 2008
               </span>
+              <p className="text-[16px] leading-6 font-medium text-textColor">
+                PHD in Surgeon
+              </p>
             </div>
+            <p className="text-[14px] leading-5 font-medium text-textColor">
+              New Apollo Hospital, New York.
+            </p>
           </li>
         </ul>
       </div>
