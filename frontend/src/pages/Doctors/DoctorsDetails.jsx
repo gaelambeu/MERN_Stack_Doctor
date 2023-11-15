@@ -40,7 +40,11 @@ const DoctorsDetails = () => {
             </div>
 
             <div className="mt-[50px] border-b border-solid border-[#0066ff34]">
-              <button>About</button>
+              <button 
+                className={` py-2 px-5 mr-5 text-[16px] leading-7 text-headingColor font-semibold`}
+              >
+                About
+              </button>
             </div>
           </div>
           
