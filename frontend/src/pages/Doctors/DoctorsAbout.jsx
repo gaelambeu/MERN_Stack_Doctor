@@ -56,9 +56,11 @@ const DoctorsAbout = () => {
       </div>
 
       <div className="mt-12">
-        <div className="text-[20px] leading-[30px] text-headingColor font-semibold">
+        <h3 className="text-[20px] leading-[30px] text-headingColor font-semibold">
           Experience
-        </div>
+        </h3>
+
+        <ul className="grid"></ul>
       </div>
     </div>
   )
