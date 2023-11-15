@@ -1,4 +1,5 @@
 import React from 'react'
+import { formateDate } from '../../utils/formateDate'
 
 const DoctorsAbout = () => {
   return (
@@ -23,12 +24,11 @@ const DoctorsAbout = () => {
           Education
         </h3>
 
-
         <ul className="pt-4 md:p-5">
           <li className="flex flex-col sm:flex-row sm:justify-between sm:items-end md:gap-5 mb-[30px]">
             <div>
               <span className="text-blue-400 text-[15px] leading-6 font-semibold">
-                23 June, 2008
+              {formateDate("09-13-2014")} - {formateDate("09-13-2016")}
               </span>
               <p className="text-[16px] leading-6 font-medium text-textColor">
                 PHD in Surgeon
@@ -42,7 +42,7 @@ const DoctorsAbout = () => {
           <li className="flex flex-col sm:flex-row sm:justify-between sm:items-end md:gap-5 mb-[30px]">
             <div>
               <span className="text-blue-400 text-[15px] leading-6 font-semibold">
-                23 June, 2008
+                {formateDate("07-04-2010")} - {formateDate("09-13-2014")}
               </span>
               <p className="text-[16px] leading-6 font-medium text-textColor">
                 PHD in Surgeon
@@ -53,6 +53,12 @@ const DoctorsAbout = () => {
             </p>
           </li>
         </ul>
+      </div>
+
+      <div className="mt-12">
+        <div className="text-[20px] leading-[30px] text-headingColor font-semibold">
+          Experience
+        </div>
       </div>
     </div>
   )
