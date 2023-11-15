@@ -1,4 +1,5 @@
 import React from 'react'
+import doctorImg from '../../assets/images/doctor-img02.png'
 
 const DoctorsDetails = () => {
   return (
@@ -9,7 +10,7 @@ const DoctorsDetails = () => {
           <div className="md:col-span-2">
             <div className="flex items-center gap-5">
               <figure>
-                <img src="" alt="" />
+                <img src={doctorImg} alt="" />
               </figure>
             </div>
           </div>
