@@ -30,7 +30,7 @@ const DoctorsAbout = () => {
               <span className="text-blue-400 text-[15px] leading-6 font-semibold">
               {formateDate("09-13-2014")} - {formateDate("09-13-2016")}
               </span>
-              <p className="text-[16px] leading-6 font-medium text-textColor">
+              <p className="text-[15px] leading-6 font-medium text-textColor">
                 PHD in Surgeon
               </p>
             </div>
@@ -62,7 +62,9 @@ const DoctorsAbout = () => {
 
         <ul className="grid sm:grid-cols-2 gap-[30px] pt-4 md:p-5">
           <li className="p-4 rounded bg-[#fff9ea]">
-            <span className="text-yellowColor text-[15px] leading-6"></span>
+            <span className="text-yellowColor text-[15px] leading-6 font-semibold">
+              {formateDate("09-13-2014")} - {formateDate("09-13-2016")}
+            </span>
           </li>
         </ul>
       </div>
