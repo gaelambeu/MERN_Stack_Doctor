@@ -1,5 +1,6 @@
 import React from 'react'
 import doctorImg from '../../assets/images/doctor-img02.png'
+import starIcon from '../../assets/images/Star.png'
 
 const DoctorsDetails = () => {
   return (
@@ -22,7 +23,10 @@ const DoctorsDetails = () => {
                   Muhibur Rahman 
                 </h3>
                 <div className="Flex items-center gap-[6px]">
-                  <span></span>
+                  <span className="flex items-center gap-[6px] text-[14px] leading-5 lg:text-[16px] 
+                  lg:leading-7 font-semibold text-headingColor">
+                    <img src={starIcon} alt="" /> 4.8
+                  </span>
                 </div>
               </div>
             </div>
