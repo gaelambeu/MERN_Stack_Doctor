@@ -1,6 +1,6 @@
 import avatar from "../../assets/images/avatar-icon.png"
 import { formateDate } from '../../utils/formateDate'
-
+import { AiFillStar } from "react-icons/ai"
 
 const Feedback = () => {
   return (
@@ -30,9 +30,15 @@ const Feedback = () => {
                 </div>
 
                 <div className="flex gap-1">
-                    {[...Array(5).keys()].map((_,index)=> <)}
+                    {[...Array(5).keys()].map((_,index)=> (
+                        <AiFillStar key={index} color='#0067FF' />
+                    ))}
                 </div>
             </div>
+        </div>
+
+        <div className="text-center">
+            <button className="btn">Give Feedback</button>
         </div>
     </div>
   )
