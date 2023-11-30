@@ -30,7 +30,7 @@ const Feedback = () => {
                 </div>
 
                 <div className="flex gap-1">
-                    {[...Array(5).keys]}
+                    {[...Array(5).keys()].map((_,index)=> <)}
                 </div>
             </div>
         </div>
