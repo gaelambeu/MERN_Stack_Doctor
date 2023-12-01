@@ -1,4 +1,5 @@
 import React from 'react'
+import signupImg from "../assets/images/signup.gif"
 
 const Signup = () => {
   return (
@@ -8,8 +9,15 @@ const Signup = () => {
           {/* ==============   img box     ==============*/}
           <div className="hidden lg:block bg-primaryColor rounded-l-lg">
             <figure className="rounded-l-lg">
-              <img src={signupImg} alt="" />
+              <img src={signupImg} alt="" className="w-full rounded-l-lg" />
             </figure>
+          </div>
+
+          {/* ==============   sign up form     ==============*/}
+          <div className="rounded-l-lg lg:pl-16 py-10">
+            <h3 className="text-headingColor text-[22px] leading-9 font-bold mb-10">
+              Create an <span className="text-primaryColor">account</span>
+            </h3>
           </div>
         </div>
       </div>

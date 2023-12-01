@@ -19,7 +19,7 @@ const Login = () => {
           Hello! <span className="text-primaryColor">Welcome</span> Back
         </h3>
 
-        <form action="" className="py-4 md:py-0">
+        <form className="py-4 md:py-0">
           <div className="mb-5">
             <input 
               type="email" 
