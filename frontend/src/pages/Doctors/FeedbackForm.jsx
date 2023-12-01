@@ -9,7 +9,7 @@ const FeedbackForm = () => {
   return (
     <form action="">
         <div>
-            <h3 className="text-headingColor text-[16px] leading-6 font-semibold mb-4">
+            <h3 className="text-headingColor text-[16px] leading-6 font-semibold mb-4 mt-0">
                 How would you rate the overall experience?
             </h3>
 
@@ -41,6 +41,15 @@ const FeedbackForm = () => {
                     )
                 } )}
             </div>
+        </div>
+
+
+        <div className="mt-[30px]">
+            <h3 className="text-headingColor text-[16px] leading-6 font-semibold mb-4 mt-0">
+               Share your feedback or suggestions
+            </h3>
+
+            <textarea className="bo" cols="30" rows="10"></textarea>
         </div>
     </form>
   )
