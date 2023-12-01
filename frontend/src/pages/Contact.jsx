@@ -20,9 +20,9 @@ const Contact = () => {
             />
           </div>
           <div>
-            <label htmlFor="subject" className="form__label">Your Email</label>
+            <label htmlFor="subject" className="form__label">Subject</label>
             <input 
-              type="email" 
+              type="text" 
               id="subject" 
               placeholder="Let us know how we can help you" 
               className="form__input mt-1 "
