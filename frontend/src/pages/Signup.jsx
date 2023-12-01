@@ -2,9 +2,27 @@ import { Link } from 'react-router-dom'
 
 import signupImg from "../assets/images/signup.gif"
 import avatar from "../assets/images/doctor-img01.png"
+import { useState } from 'react'
 
 
 const Signup = () => {
+
+  const [selectedFile, setSelectedFile] = useState(null)
+  const [previewURL, setPreviewURL] = useState("")
+
+  const [formData, setFormData] = useState({
+    name:"",
+    email:"",
+    password:"",
+    photo:selectedFile,
+    gender:"",
+    role:'patient'
+  })
+
+  const handleInputChange = e => {
+    setFormData({... formData, [e.target.name]: e.target.value})
+  }
+
   return (
     <section className="px-5 xl:px-0">
       <div className="max-w-[1170px] mx-auto">
@@ -28,7 +46,8 @@ const Signup = () => {
                   type="name" 
                   placeholder="Full Name" 
                   name="name" 
-                  value=""  
+                  value={formData.name} 
+                  onChange={handleInputChange}
                   className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] 
                   focus:outline-none focus:border-b-primaryColor text-[16px] leading-7
                   text-headingColor placeholder:text-textColor cursor-pointer"
@@ -40,7 +59,8 @@ const Signup = () => {
                   type="email" 
                   placeholder="Enter your email" 
                   name="email" 
-                  value=""  
+                  value={formData.name} 
+                  onChange={handleInputChange} 
                   className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] 
                   focus:outline-none focus:border-b-primaryColor text-[16px] leading-7
                   text-headingColor placeholder:text-textColor cursor-pointer"
