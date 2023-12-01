@@ -39,7 +39,7 @@ const Contact = () => {
             />
           </div>
 
-          <button className="btn rounded sm:w-fit">Submit</button>
+          <button type="submit" className="btn rounded sm:w-fit">Submit</button>
         </form>
       </div>
     </section>
