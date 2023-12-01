@@ -29,6 +29,10 @@ const Signup = () => {
     console.log(file)
   }
 
+  const submitHandler = async event => {
+    event.preventDefault()
+  }
+
   return (
     <section className="px-5 xl:px-0">
       <div className="max-w-[1170px] mx-auto">
@@ -46,7 +50,7 @@ const Signup = () => {
               Create an <span className="text-primaryColor">account</span>
             </h3>
 
-            <form >
+            <form onSubmit={submitHandler}>
               <div className="mb-5">
                 <input 
                   type="name" 
