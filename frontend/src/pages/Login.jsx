@@ -24,7 +24,8 @@ const Login = () => {
             <input 
               type="email" 
               placeholder="Enter your Email" 
-              name="email" value={formData.email} 
+              name="email" 
+              value={formData.email} 
               onChange={handleInputChange} 
               className="w-full py-3 border-b border-solid border-[#0066ff61] 
               focus:outline-none focus:border-b-primaryColor text-[16px] leading-7
@@ -37,7 +38,8 @@ const Login = () => {
             <input 
               type="password" 
               placeholder="Password" 
-              name="email" value={formData.password} 
+              name="password" 
+              value={formData.password} 
               onChange={handleInputChange} 
               className="w-full py-3 border-b border-solid border-[#0066ff61] 
               focus:outline-none focus:border-b-primaryColor text-[16px] leading-7
