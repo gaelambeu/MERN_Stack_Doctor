@@ -23,6 +23,12 @@ const Signup = () => {
     setFormData({... formData, [e.target.name]: e.target.value})
   }
 
+  const handleFileInputChange = async (event) => {
+    const file = event.target.files[0]
+
+    console.log(file)
+  }
+
   return (
     <section className="px-5 xl:px-0">
       <div className="max-w-[1170px] mx-auto">
@@ -122,6 +128,7 @@ const Signup = () => {
                     type="file"
                     name="photo"
                     id="customFile"
+                    onChange={handleFileInputChange}
                     accept=".jpg,.png" 
                     className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
                 />
