@@ -50,6 +50,8 @@ const Login = () => {
             leading-[30px] rounded-lg px-4 py-3">Login</button>
           </div>
 
+          <p >Don&apos;t have an account?</p>
+
         </form>
       </div>
     </section>
