@@ -17,6 +17,16 @@ app.get('/', (req,res)=>{
     res.send('Api is working')
 })
 
+// database connection
+mongoose.set('strictQuery', false)
+const connectDB = async() => {
+    try {
+        mongoose.connect(process.)
+    } catch (err) {
+        
+    }
+}
+
 // middleware
 app.use(express.json())
 app.use(cookieParser())
