@@ -12,6 +12,8 @@ export const register =async(req, res) =>{
         
         let user = null
 
+        if (role==='patient')
+
 
 
     } catch (err) {
