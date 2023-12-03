@@ -20,6 +20,16 @@ export const register =async(req, res) =>{
             user = Doctor.findOne({email})
         }
 
+        // Check if user exist
+        if(user){
+            return res.status(400).json({message:'User already exist'})
+        }
+
+        // Hash password
+        const salt = await bcrypt.genSalt(10)
+        const hashPassword = await bcrypt.hash(password, salt)
+
+        
 
     } catch (err) {
         
