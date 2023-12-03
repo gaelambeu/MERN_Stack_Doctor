@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
 
 
-export const register =async(req, res) =>{
+export const register =async (req, res) =>{
     
     const {email, password, name, role, photo, gender} = req.body
 
@@ -13,11 +13,11 @@ export const register =async(req, res) =>{
         let user = null
 
         if (role==='patient'){
-            user = User.findOne({email})
+            user = await User.findOne({email})
         }
         
         else if (role==='doctor'){
-            user = Doctor.findOne({email})
+            user = await Doctor.findOne({email})
         }
 
         // Check if user exist
@@ -68,8 +68,18 @@ export const register =async(req, res) =>{
 }
 
 export const login =async(req, res) =>{
+
+    const {email, password} = req.body
+
     try {
         
+        let user = null
+
+        const patient = await User.findOne({email})
+        const doctor = await Doctor.findOne({email})
+
+        
+
     } catch (err) {
         
     }
