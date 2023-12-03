@@ -29,7 +29,27 @@ export const register =async(req, res) =>{
         const salt = await bcrypt.genSalt(10)
         const hashPassword = await bcrypt.hash(password, salt)
 
-        
+        if(role==='patient'){
+            user = new User({
+                name,
+                email,
+                password: hashPassword,
+                photo,
+                gender,
+                role
+            })
+        }
+
+        if(role==='doctor'){
+            user = new  Doctor({
+                name,
+                email,
+                password: hashPassword,
+                photo,
+                gender,
+                role
+            })
+        }
 
     } catch (err) {
         
