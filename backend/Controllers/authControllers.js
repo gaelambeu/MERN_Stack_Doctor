@@ -12,8 +12,13 @@ export const register =async(req, res) =>{
         
         let user = null
 
-        if (role==='patient')
-
+        if (role==='patient'){
+            user = User.findOne({email})
+        }
+        
+        else if (role==='doctor'){
+            user = Doctor.findOne({email})
+        }
 
 
     } catch (err) {
