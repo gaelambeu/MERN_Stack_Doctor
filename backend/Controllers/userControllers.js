@@ -54,9 +54,7 @@ export const getSingleUser = async(req, res) => {
 
     try {
         
-        const user = await User.findById(
-            id, 
-        )
+        const user = await User.findById(id).select("-password")
 
         res.status(200).json({
             success: true, 
@@ -78,7 +76,7 @@ export const getAllUser = async(req, res) => {
 
     try {
         
-        const users = await User.find({})
+        const users = await User.find({}).select("-password")
 
         res.status(200).json({
             success: true, 
