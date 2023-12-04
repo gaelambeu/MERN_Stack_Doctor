@@ -6,7 +6,7 @@ import {
     getSingleUser
 } from "../Controllers/userControllers.js"
 
-import { authenticate } from '../auth/verifyToken.js';
+
 
 const router = express.Router()
 
