@@ -54,22 +54,42 @@ export const getSingleUser = async(req, res) => {
 
     try {
         
-        const updatedUser = await User.findByIdAndUpdate(
+        const user = await User.findById(
             id, 
-            {$set:req.body}, 
-            {new:true}
         )
 
         res.status(200).json({
             success: true, 
-            message:"Successfully updated", 
-            data: updateUser
+            message:"User found", 
+            data: user,
         })
 
     } catch (err) {
-        res.status(500).json({
+        res.status(404).json({
             success: false, 
-            message:"Failed to update", 
+            message:"No user found", 
+        })
+    }
+}
+
+
+export const getAllUser = async(req, res) => {
+    const id = req.params.id
+
+    try {
+        
+        const users = await User.find({})
+
+        res.status(200).json({
+            success: true, 
+            message:"Users found", 
+            data: users,
+        })
+
+    } catch (err) {
+        res.status(404).json({
+            success: false, 
+            message:"Not found", 
         })
     }
 }
