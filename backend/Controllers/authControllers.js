@@ -3,6 +3,10 @@ import Doctor from '../models/DoctorSchema.js'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
 
+const generateToken = user => {
+    return jwt.sign({id:user._id, role:user.role}, process.env.JWT_SECRET_key)
+}
+
 
 export const register =async (req, res) =>{
     
@@ -98,9 +102,12 @@ export const login =async(req, res) =>{
         if(!isPasswordMatch){
             return res.status(400).json({
                 status: false,
-                message: "User not found"
+                message: "Invalid credentials"
             })
         }
+
+        // get toke 
+
 
     } catch (err) {
         
