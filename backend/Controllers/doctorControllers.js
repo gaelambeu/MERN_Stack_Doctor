@@ -54,12 +54,12 @@ export const getSingleDoctor = async(req, res) => {
 
     try {
         
-        const Doctor = await Doctor.findById(id).select("-password")
+        const doctor = await Doctor.findById(id).select("-password")
 
         res.status(200).json({
             success: true, 
             message:"Doctor found", 
-            data: Doctor,
+            data: doctor,
         })
 
     } catch (err) {
