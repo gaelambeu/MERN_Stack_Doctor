@@ -6,7 +6,7 @@ import bcrypt from 'bcryptjs'
 const generateToken = user => {
     return jwt.sign({id:user._id, role:user.role}, 
         process.env.JWT_SECRET_key, {
-        expiresIn:'15d'
+        expiresIn:"15d"
     })
 }
 
@@ -110,9 +110,22 @@ export const login =async(req, res) =>{
         }
 
         // get toke 
+        const token = generateToken(user)
 
+        const {password, role, appointments, ...rest} = user._doc
+
+        res.status(200).json({
+            status: true,
+            message: "Successfully login", 
+            token,
+            data: { ...rest},
+            role,
+        })
 
     } catch (err) {
-        
+        res.status(500).json({
+            status: false,
+            message: "Failed to login"
+        })
     }
 }
