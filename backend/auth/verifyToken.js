@@ -10,9 +10,9 @@ export const authenticate = async (req, res, next) => {
     // check token is exists
     if(!authToken || !authToken.startsWith("Bearer")){
         return res.status(401).json({
-                success:false, 
-                message:'No token, authorization denied'
-         })
+            success:false, 
+            message:'No token, authorization denied' 
+        })
     }
 
     try {
