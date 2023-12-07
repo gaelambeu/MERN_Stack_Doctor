@@ -6,6 +6,8 @@ import {
     getSingleDoctor
 } from "../Controllers/doctorControllers.js"
 
+import { authenticate, restrict } from '../auth/verifyToken.js';
+
 const router = express.Router()
 
 router.get('/:id', getSingleDoctor)
