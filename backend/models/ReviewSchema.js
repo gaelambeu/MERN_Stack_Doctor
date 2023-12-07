@@ -33,4 +33,24 @@ reviewSchema.pre(/^find/, function(next){
   next();
 })
 
+reviewSchema.statics.calcAverageRatings = async function(doctorId){
+  // this points the current review
+  const stats = await this.aggregate([{
+    $match: {doctor:doctorId}
+  },
+  {
+    $group:{
+      _id:'$doctor',
+      numOfRating: {$num:1},
+      avgRating:{$avg: '$rating'}
+    }
+  }
+  ])
+
+  console.log(stats);
+
+}
+
+
+
 export default mongoose.model("Review", reviewSchema);
