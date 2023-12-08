@@ -30,8 +30,7 @@ const Signup = () => {
   }
 
   const submitHandler = async event => {
-    console.log(formData
-      )
+    console.log(formData)
     event.preventDefault()
   }
 
