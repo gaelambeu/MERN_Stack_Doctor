@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import signupImg from "../assets/images/signup.gif"
 import avatar from "../assets/images/doctor-img01.png"
 import { useState } from 'react'
 import uploadImageToCloudinary from '../utils/uploadCloudinary'
 import { BASE_URL } from "../config.js"
+import {toast} from 'react-toastify'
 
 
 const Signup = () => {
@@ -21,6 +22,8 @@ const Signup = () => {
     gender:"",
     role:'patient'
   })
+
+  const navigate = useNavigate()
 
   const handleInputChange = e => {
     setFormData({... formData, [e.target.name]: e.target.value})
@@ -43,9 +46,26 @@ const Signup = () => {
     setLoading(true)
 
     try {
-      const res = await fetch(`${BASE_URL}/auth/register`)
+      const res = await fetch(`${BASE_URL}/auth/register`, {
+        method:'post',
+        headers:{
+          'Content-Type':'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+
+      const {message} = await res.json()
+
+      if(!res.ok){
+        throw new Error (message)
+      }
+
+      setLoading(false)
+      toast.success(message)
+      navigate('/login')
+
     } catch (err) {
-      
+      toast.error
     }
   }
 
