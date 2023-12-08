@@ -4,6 +4,7 @@ import signupImg from "../assets/images/signup.gif"
 import avatar from "../assets/images/doctor-img01.png"
 import { useState } from 'react'
 import uploadImageToCloudinary from '../utils/uploadCloudinary'
+import { BASE_URL } from "../config.js"
 
 
 const Signup = () => {
@@ -42,7 +43,7 @@ const Signup = () => {
     setLoading(true)
 
     try {
-      
+      const res = await fetch(`${BASE_URL}/auth/register`)
     } catch (err) {
       
     }
