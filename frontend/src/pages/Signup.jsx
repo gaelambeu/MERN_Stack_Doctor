@@ -10,6 +10,7 @@ const Signup = () => {
 
   const [selectedFile, setSelectedFile] = useState(null)
   const [previewURL, setPreviewURL] = useState("")
+  const [loading, setLoading] = useState(false)
 
   const [formData, setFormData] = useState({
     name:"",
@@ -38,6 +39,13 @@ const Signup = () => {
 
   const submitHandler = async event => {
     event.preventDefault()
+    setLoading(true)
+
+    try {
+      
+    } catch (err) {
+      
+    }
   }
 
   return (
