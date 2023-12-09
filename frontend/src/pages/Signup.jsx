@@ -65,7 +65,8 @@ const Signup = () => {
       navigate('/login')
 
     } catch (err) {
-      toast.error
+      toast.error(err.message)
+      setLoading(false)
     }
   }
 
@@ -158,10 +159,10 @@ const Signup = () => {
               </div>
 
               <div className="mb-5 flex items-center gap-3">
-                <figure className="w-[60px] h-[60px] rounded-full border-2 border-solid border-primaryColor 
-                flex items-center justify-center">
-                  <img src={avatar} alt="" className="w-full rounded-full" />
-                </figure>
+                {selectedFile &&<figure className="w-[60px] h-[60px] rounded-full border-2 border-solid border-primaryColor 
+                  flex items-center justify-center">
+                  <img src={previewURL} alt="" className="w-full rounded-full" />
+                </figure>}
 
                 <div className="relative w-[130px] h-[50px]">
                   <input 
