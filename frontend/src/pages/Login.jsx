@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../config'
+import { toast } from 'react-toastify'
+import {authContext} from '../context/authContext.js'
 
 const Login = () => {
 
@@ -10,6 +12,7 @@ const Login = () => {
   })
 
   const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
 
   const handleInputChange = e => {
     setFormData({... formData, [e.target.name]: e.target.value})
@@ -28,15 +31,15 @@ const Login = () => {
         body: JSON.stringify(formData)
       })
 
-      const {message} = await res.json()
+      const result = await res.json()
 
       if(!res.ok){
-        throw new Error (message)
+        throw new Error (result.message)
       }
 
       setLoading(false)
-      toast.success(message)
-      navigate('/login')
+      toast.success(result.message)
+      navigate('/home')
 
     } catch (err) {
       toast.error(err.message)
