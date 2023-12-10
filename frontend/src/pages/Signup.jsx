@@ -159,9 +159,13 @@ const Signup = () => {
               </div>
 
               <div className="mb-5 flex items-center gap-3">
-                {selectedFile &&<figure className="w-[60px] h-[60px] rounded-full border-2 border-solid border-primaryColor 
+                {selectedFile && <figure className="w-[60px] h-[60px] rounded-full border-2 border-solid border-primaryColor 
                   flex items-center justify-center">
-                  <img src={previewURL} alt="" className="w-full rounded-full" />
+                  <img 
+                    src={previewURL} 
+                    alt="" 
+                    className="w-full rounded-full" 
+                  />
                 </figure>}
 
                 <div className="relative w-[130px] h-[50px]">
@@ -184,8 +188,13 @@ const Signup = () => {
               </div>
 
               <div className="mt-7">
-                <button type="submit" className="w-full bg-primaryColor text-white text-[18px] 
-                leading-[30px] rounded-lg px-4 py-3">Sign Up</button>
+                <button 
+                  disabled={loading && true}
+                  type="submit" 
+                  className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3"
+                >
+                  {loading ? <Hashloading /> : 'Sign Up'}
+                </button>
               </div>
 
               <p className="mt-5 text-textColor text-center">
