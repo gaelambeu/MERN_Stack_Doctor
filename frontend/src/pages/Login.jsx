@@ -2,7 +2,7 @@ import { useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../config'
 import { toast } from 'react-toastify'
-import {authContext} from '../context/authContext.js'
+import {authContext} from '../context/AuthContext.jsx'
 
 const Login = () => {
 
@@ -41,10 +41,13 @@ const Login = () => {
       dispatch({
         type:'LOGIN_SUCCESS',
         payload:{
-          user:result.data,
-          token:result.token,
+          user: result.data,
+          token: result.token,
+          role: result.role,
         }
       })
+
+      console.log(result, "login data")
 
       setLoading(false)
       toast.success(result.message)
