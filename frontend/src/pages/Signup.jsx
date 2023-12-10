@@ -6,6 +6,7 @@ import { useState } from 'react'
 import uploadImageToCloudinary from '../utils/uploadCloudinary'
 import { BASE_URL } from "../config.js"
 import {toast} from 'react-toastify'
+import HashLoader from 'react-spinners/HashLoader.js'
 
 
 const Signup = () => {
@@ -193,7 +194,11 @@ const Signup = () => {
                   type="submit" 
                   className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3"
                 >
-                  {loading ? <Hashloading /> : 'Sign Up'}
+                  {loading ? (
+                    <HashLoader size={35} color="#ffffff" />
+                    ) :(
+                       "Sign Up"
+                  )}
                 </button>
               </div>
 
