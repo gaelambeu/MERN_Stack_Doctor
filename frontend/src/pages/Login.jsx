@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../config'
 import { toast } from 'react-toastify'
@@ -13,6 +13,7 @@ const Login = () => {
 
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
+  const {dispatch} = useContext(authContext)  
 
   const handleInputChange = e => {
     setFormData({... formData, [e.target.name]: e.target.value})
@@ -36,6 +37,14 @@ const Login = () => {
       if(!res.ok){
         throw new Error (result.message)
       }
+
+      dispatch({
+        type:'LOGIN_SUCCESS',
+        payload:{
+          user:result.data,
+          token:result.token,
+        }
+      })
 
       setLoading(false)
       toast.success(result.message)
