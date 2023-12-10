@@ -1,4 +1,4 @@
-import { Children, createContext, useContext, useEffect, useReducer } from "react";
+import { createContext, useReducer, useEffect } from "react";
 
 const initialState = {
     user: null,
@@ -8,47 +8,47 @@ const initialState = {
 
 export const authContext = createContext(initialState)
 
-const authReducer = (state,action) => {
-    switch(action.type){
-        case 'LOGIN_START' :
+const authReducer = (state, action) => {
+    switch (action.type) {
+        case 'LOGIN_START':
             return {
                 user: null,
                 role: null,
                 token: null,
             }
 
-        case "LOGIN_SUCCESS" :
+        case "LOGIN_SUCCESS":
             return {
                 user: action.payload.user,
                 token: action.payload.token,
                 role: action.payload.role
             }
 
-        case 'LOGOUT' :
+        case 'LOGOUT':
+            return {
+                user: null,
+                role: null,
+                token: null,
+            }
 
-        return {
-            user: null,
-            role: null,
-            token: null,
-        }
-
-    default:
-        return state;
+        default:
+            return state;
     }
 }
 
-export const AuthContextProvider = ([Children]) =>{
+export const AuthContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(authReducer, initialState)
 
-    return( 
-        <authContext.Provider 
-            value={{ 
-                user:state.user, 
-                token:state.token, 
-                role:state.role, 
-                dispatch 
+    return (
+        <authContext.Provider
+            value={{
+                user: state.user,
+                token: state.token,
+                role: state.role,
+                dispatch
             }}
         >
-        {Children}
-    </authContext.Provider>)
+            {children}
+        </authContext.Provider>
+    )
 }
