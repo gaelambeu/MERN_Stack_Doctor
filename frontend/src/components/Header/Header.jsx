@@ -1,6 +1,6 @@
 import {useEffect, useRef, useContext} from 'react'
 import logo from "../../assets/images/logo.png"
-import userImg from "../../assets/images/avatar-icon.png"
+
 import { NavLink, Link } from 'react-router-dom'
 import { BiMenu } from "react-icons/bi"
 import { authContext } from "../../context/AuthContext.jsx"
@@ -95,7 +95,7 @@ const Header = () => {
                       alt="" 
                     />
                   </figure>  
-                  <h2>{user?.name}</h2>
+                  
                 </Link>
               </div> 
             ) :  (
