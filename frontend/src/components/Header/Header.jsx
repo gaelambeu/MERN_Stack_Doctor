@@ -94,9 +94,7 @@ const Header = () => {
                       className="w-full rounded-full" 
                       alt="" 
                     />
-                  </figure>
-
-                  
+                  </figure>  
                 </Link>
               </div> 
             ) :  (
