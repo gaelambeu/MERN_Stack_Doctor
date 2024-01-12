@@ -91,3 +91,21 @@ export const getAllUser = async(req, res) => {
         })
     }
 }
+
+
+export const getUserProfile = async(req, res) => {
+    const userId = req.userId
+
+    try {
+        const user = await user.findById(userId)
+
+        if(!user){
+            return res.status(404).json({
+                success: false,
+                message: 'User not found'
+            })
+        }
+    } catch (err) {
+        
+    }
+}
