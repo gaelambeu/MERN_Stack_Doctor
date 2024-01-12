@@ -108,3 +108,8 @@ export const getAllDoctor = async(req, res) => {
         })
     }
 }
+
+
+export const getDoctorProfile = async(req, res) => {
+    
+}
