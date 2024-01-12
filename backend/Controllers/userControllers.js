@@ -133,7 +133,7 @@ export const getMyAppointments = async(req, res) => {
 
 
         // stop -2 : retract doctor from appointment bookings
-
+        const doctorIds = bookings.map()
 
 
         // stop -3 : retrieve doctors using doctor ids
