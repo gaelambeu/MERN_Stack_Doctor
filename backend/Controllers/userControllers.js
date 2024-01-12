@@ -138,7 +138,13 @@ export const getMyAppointments = async(req, res) => {
 
 
         // stop -3 : retrieve doctors using doctor ids
-        const doctors = await Doctor.find({_id: {$in:doctorIds}})
+        const doctors = await Doctor.find({_id: {$in:doctorIds}}).select('-password')
+
+        res.status(200).json({
+            sucess: true, 
+            message:"Appointments are getting",
+            data: doctors
+        })
 
 
 
