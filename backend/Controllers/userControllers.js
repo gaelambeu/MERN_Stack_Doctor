@@ -138,7 +138,7 @@ export const getMyAppointments = async(req, res) => {
 
 
         // stop -3 : retrieve doctors using doctor ids
-        const doctors = await Doctor.find()
+        const doctors = await Doctor.find({_id: {$in:doctorIds}})
 
 
 
