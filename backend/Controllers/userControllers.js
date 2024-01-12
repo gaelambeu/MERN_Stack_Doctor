@@ -115,9 +115,9 @@ export const getUserProfile = async(req, res) => {
         })
 
     } catch (err) {
-        res.status(404).json({
+        res.status(500).json({
             success: false, 
-            message:"Not found", 
+            message:"Something went wrong, cannot get", 
         })
     }
 }
