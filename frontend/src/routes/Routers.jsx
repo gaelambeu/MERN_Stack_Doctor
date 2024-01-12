@@ -23,10 +23,13 @@ const Routers = () => {
     <Route path="/contact" element={<Contact/>} />
     <Route path="/services" element={<Services/>} />
     <Route path="/users/profile/me" element={ <ProtectedRoute allowedRoles={['patient']}>
-                                                <MyAccount/> 
+                                                <MyAccount /> 
                                               </ProtectedRoute>
                                             } />
-    <Route path="/doctors/profile/me" element={<Dashboard/>} />
+    <Route path="/doctors/profile/me" element={ <ProtectedRoute allowedRoles={['doctor']}>
+                                                  <Dashboard />
+                                                </ProtectedRoute>
+                                              } />
   </Routes>
 }
 
