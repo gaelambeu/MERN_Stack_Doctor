@@ -15,9 +15,20 @@ const MyAccount = () => {
           </div>
 
           <div className="text-center mt-4">
-            <h3 className='text-[18px] leading-[30px] text-headingColor font-bold'>Muhibur Rahman</h3>
-            <p className="text-textColor text-[15px] leading-6 font-medium">example@gmaili.com</p>
+            <h3 className='text-[18px] leading-[30px] text-headingColor font-bold'>
+              Muhibur Rahman
+            </h3>
+            <p className="text-textColor text-[15px] leading-6 font-medium">
+              example@gmaili.com
+            </p>
+            <p className="text-textColor text-[15px] leading-6 font-medium">
+              Blood Type: <span className="ml-2 text-headingColor text-[22px] leading-8">
+                O-
+              </span>
+            </p>
           </div>
+
+          
         </div>
 
       </div>
