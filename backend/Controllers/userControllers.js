@@ -110,9 +110,14 @@ export const getUserProfile = async(req, res) => {
 
         res.status(200).json({
             success: true,
-            message:'Profile info is getting'
+            message:'Profile info is getting',
+            data: { ...rest}
         })
+
     } catch (err) {
-        
+        res.status(404).json({
+            success: false, 
+            message:"Not found", 
+        })
     }
 }
