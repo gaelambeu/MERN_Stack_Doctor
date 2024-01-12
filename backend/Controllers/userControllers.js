@@ -121,3 +121,21 @@ export const getUserProfile = async(req, res) => {
         })
     }
 }
+
+
+
+export const getMyAppointments = async(req, res) => {
+    try {
+        
+        // stop -1 : retrieve appointments from booking
+
+
+
+        // stop -2 : retract doctor from appointment bookings
+
+
+
+    } catch (err) {
+        
+    }
+}
