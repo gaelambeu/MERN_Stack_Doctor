@@ -129,7 +129,7 @@ export const getMyAppointments = async(req, res) => {
     try {
         
         // stop -1 : retrieve appointments from booking for specific user
-
+        const bookings = await Booking.find({user:req.userId})
 
 
         // stop -2 : retract doctor from appointment bookings
