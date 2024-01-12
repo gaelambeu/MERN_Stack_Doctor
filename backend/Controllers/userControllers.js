@@ -105,6 +105,13 @@ export const getUserProfile = async(req, res) => {
                 message: 'User not found'
             })
         }
+
+        const {password, ...rest} = user._doc
+
+        res.status(200).json({
+            success: true,
+            message:'Profile info is getting'
+        })
     } catch (err) {
         
     }
