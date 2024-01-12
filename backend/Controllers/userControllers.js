@@ -146,9 +146,10 @@ export const getMyAppointments = async(req, res) => {
             data: doctors
         })
 
-
-
     } catch (err) {
-        
+        res.status(500).json({
+            success: false, 
+            message:"Something went wrong, cannot get", 
+        })
     }
 }
