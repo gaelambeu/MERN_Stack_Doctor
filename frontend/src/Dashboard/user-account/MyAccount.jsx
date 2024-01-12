@@ -28,7 +28,11 @@ const MyAccount = () => {
             </p>
           </div>
 
-          
+          <div className="mt-[50px] md:mt-[100px]">
+            <button className="w-full bg-[#181A1E] p-3 text-[36px] leading-7 rounded-md">Logout</button>
+            <button className="w-full bg-[#181A1E] p-3 text-[36px] leading-7 rounded-md">Logout</button>
+
+          </div>
         </div>
 
       </div>
