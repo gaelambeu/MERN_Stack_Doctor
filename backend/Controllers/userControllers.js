@@ -127,11 +127,16 @@ export const getUserProfile = async(req, res) => {
 export const getMyAppointments = async(req, res) => {
     try {
         
-        // stop -1 : retrieve appointments from booking
+        // stop -1 : retrieve appointments from booking for specific user
 
 
 
         // stop -2 : retract doctor from appointment bookings
+
+
+
+        // stop -3 : retrieve doctors using doctor ids
+
 
 
 
