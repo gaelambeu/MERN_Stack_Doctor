@@ -23,7 +23,7 @@ const MyAccount = () => {
             </p>
             <p className="text-textColor text-[15px] leading-6 font-medium">
               Blood Type: <span className="ml-2 text-headingColor text-[22px] leading-8">
-                O-
+                AB+
               </span>
             </p>
           </div>
