@@ -51,19 +51,19 @@ const MyAccount = () => {
 
         <div className="md:col-span-2 md:px-[30px] ">
           <div>
-          <button 
-            onClick={() => setTab('bookings')} 
-            className={` ${tab === 'bookings' ? 'bg-primaryColor text-white font-normal' : ''}
-            p-2 mr-5 px-5 rounded-md text-headingColor font-semibold text-[16px] leading-7 border border-solid border-primaryColor`}>
-                My Bookings
-          </button>
+            <button 
+              onClick={() => setTab('bookings')} 
+              className={` ${tab === 'bookings' ? 'bg-primaryColor text-white font-normal' : 'gray-200 text-gray-600'}
+              p-2 mr-5 px-5 rounded-md text-headingColor font-semibold text-[16px] leading-7 border border-solid border-primaryColor`}>
+                  My Bookings
+            </button>
 
-          <button 
-            onClick={() => setTab('settings')} 
-            className={` ${tab === 'settings' ? '' : 'bg-primaryColor text-white font-normal'} 
-            py-2 px-5 rounded-md text-headingColor font-semibold text-[16px] leading-7 border border-solid border-primaryColor`}>
-                Profile Settings
-          </button>
+            <button 
+              onClick={() => setTab('settings')} 
+              className={` ${tab === 'settings' ? 'bg-primaryColor text-white font-normal' : 'gray-200 text-gray-600'} 
+              py-2 px-5 rounded-md text-headingColor font-semibold text-[16px] leading-7 border border-solid border-primaryColor`}>
+                  Profile Settings
+            </button>
           </div>
         </div>
 
