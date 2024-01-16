@@ -20,20 +20,25 @@ const useFetchData = (url) => {
                 const result = await res.json()
     
                 if(!res.ok){
-                    return toast.error(result.message)
+                    return new Error(result.message)
                 }
 
                 setData(result.data)
                 setLoading(false)
                 
             } catch (err) {
-                
+                setLoading(false)
+                setError(err.message)
             }
         }
-    }, [])
+
+        fetchData()
+    }, [url])
 
   return (
-    <div>useFetchData</div>
+    data,
+    loading,
+    error
   )
 }
 
