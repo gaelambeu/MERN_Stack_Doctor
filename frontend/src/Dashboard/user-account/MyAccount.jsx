@@ -8,7 +8,7 @@ import Profile from './Profile'
 const MyAccount = () => {
 
   const {dispatch} = useContext(authContext)
-  const {tab, setTab} = useState('bookings')
+  const [tab, setTab] = useState('bookings')
 
   const handleLogout = () => {
     dispatch({type: 'LOGOUT'})
