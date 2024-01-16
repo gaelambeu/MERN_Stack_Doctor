@@ -35,11 +35,11 @@ const useFetchData = (url) => {
         fetchData()
     }, [url])
 
-  return (
+  return { 
     data,
     loading,
     error
-  )
+  }
 }
 
 export default useFetchData
