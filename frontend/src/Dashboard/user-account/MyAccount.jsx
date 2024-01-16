@@ -1,4 +1,5 @@
 import {useContext} from 'react'
+import { authContext } from './../../context/AuthContext'
 import userImg from '../../assets/images/doctor-img01.png'
 
 const MyAccount = () => {
@@ -23,7 +24,7 @@ const MyAccount = () => {
             </p>
             <p className="text-textColor text-[15px] leading-6 font-medium">
               Blood Type: <span className="ml-2 text-headingColor text-[22px] leading-8">
-                AB+
+                O-
               </span>
             </p>
           </div>
