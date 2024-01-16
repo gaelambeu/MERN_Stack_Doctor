@@ -1,10 +1,11 @@
-import {useContext} from 'react'
+import {useContext, useState } from 'react'
 import { authContext } from './../../context/AuthContext'
 import userImg from '../../assets/images/doctor-img01.png'
 
 const MyAccount = () => {
 
   const {dispatch} = useContext(authContext)
+  const {tab, setTab} = useState('bookings')
 
   const handleLogout = () => {
     dispatch({type: 'LOGOUT'})
