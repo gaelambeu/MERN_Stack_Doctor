@@ -9,11 +9,11 @@ const useFetchData = (url) => {
 
     useEffect(() =>{
         const fetchData = async () =>{
-            const res = await fetch(url, {
-                headers:{Authorization : `Bearer ${token}`}
-            })
-
-            const result
+            try {
+                
+            } catch (error) {
+                
+            }
         }
     }, [])
 
