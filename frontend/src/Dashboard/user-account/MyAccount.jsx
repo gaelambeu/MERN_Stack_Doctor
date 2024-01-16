@@ -53,7 +53,8 @@ const MyAccount = () => {
           <div>
             <button 
               onClick={() => setTab('bookings')} 
-              className="p-2 mr-5 px-5 rounded-md text-headingColor font-semibold text-[16px] leading-7 border border-solid border-primaryColor">
+              className={` ${tab==='bookings' && 'bg-primaryColor text-white font-normal'}
+                p-2 mr-5 px-5 rounded-md text-headingColor font-semibold text-[16px] leading-7 border border-solid border-primaryColor`}>
                 My Bookings
             </button>
 
