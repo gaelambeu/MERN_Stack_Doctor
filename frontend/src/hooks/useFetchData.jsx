@@ -6,6 +6,14 @@ const useFetchData = (url) => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
 
+    useEffect(() =>{
+        const fetchData = async () =>{
+            const res = await fetch(url, {
+                headers:{Authorization : `Bearer ${token}`}
+            })
+        }
+    }, [])
+
   return (
     <div>useFetchData</div>
   )
