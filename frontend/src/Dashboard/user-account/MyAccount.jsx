@@ -8,6 +8,8 @@ import Profile from './Profile'
 import useGetProfile from '../../hooks/useFetchData'
 import { BASE_URL } from '../../config'
 
+import Loading from '../../components/Loader/Loading'
+
 const MyAccount = () => {
 
   const {dispatch} = useContext(authContext)
@@ -32,6 +34,7 @@ const MyAccount = () => {
       <div className='max-w-[1170px] px-5 mx-auto'>
         {loading && <Loading/>}
 
+        {loading && <Error/>}
 
         {
           !loading && !error && (
