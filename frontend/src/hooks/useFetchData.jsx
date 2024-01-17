@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import { token } from '../config'
 
+
 const useFetchData = (url) => {
 
     const [data, setData] = useState([])
@@ -20,7 +21,7 @@ const useFetchData = (url) => {
                 const result = await res.json()
     
                 if(!res.ok){
-                    return new Error(result.message)
+                    throw new Error(result.message)
                 }
 
                 setData(result.data)
