@@ -31,9 +31,9 @@ const MyAccount = () => {
 
 
   return (
-    <section>
+  <section>
     <div className='max-w-[1170px] px-5 mx-auto'>
-  
+
       {!loading && !error && (
         <div className="grid md:grid-cols-3 gap-10">
           
@@ -43,7 +43,7 @@ const MyAccount = () => {
                 <img src={userImg} alt="" className='w-full h-full rounded-full'/>
               </figure>
             </div>
-  
+
             <div className="text-center mt-4">
               <h3 className='text-[18px] leading-[30px] text-headingColor font-bold'>
                 Muhibur Rahman
@@ -57,7 +57,7 @@ const MyAccount = () => {
                 </span>
               </p>
             </div>
-  
+
             <div className="mt-[50px] md:mt-[100px]">
               <button onClick={handleLogout} className="w-full bg-[#181A1E] p-3 text-[16px] leading-7 rounded-md text-white">
                 Logout
@@ -67,7 +67,7 @@ const MyAccount = () => {
               </button>
             </div>
           </div>
-  
+
           <div className="md:col-span-2 md:px-[30px]">
             <div>
               <button 
@@ -76,7 +76,7 @@ const MyAccount = () => {
                   p-2 mr-5 px-5 rounded-md text-headingColor font-semibold text-[16px] leading-7 border border-solid border-primaryColor`}>
                 My Bookings
               </button>
-  
+
               <button 
                 onClick={() => setTab('settings')} 
                 className={` ${tab === 'settings' && 'bg-primaryColor text-white font-normal'} 
@@ -84,7 +84,7 @@ const MyAccount = () => {
                 Profile Settings
               </button>
             </div>
-  
+
             { tab === 'bookings' && <MyBookings /> }
             { tab === 'settings' && <Profile /> } 
           </div>
@@ -93,6 +93,7 @@ const MyAccount = () => {
       
     </div>
   </section>
+
   
 
   )
