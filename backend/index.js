@@ -14,7 +14,7 @@ import reviewRoute from "./Routes/review.js"
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 8000;
+const port = 8000;
 
 const corsOptions = {
   origin: true,
