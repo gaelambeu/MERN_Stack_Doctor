@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 mongoose.set("strictQuery", false);
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URL);
+    await mongoose.connect("mongodb://localhost:27017/doctor_backend_users");
     console.log("MongoDB database is connected");
   } catch (err) {
     console.error("MongoDB connection failed:", err);
